@@ -1,0 +1,40 @@
+CREATE TABLE combustibles.precio_combustible (
+  id_precio_combustible INT64,
+  id_bencinera STRING,
+  id_ubicacion INT64,
+  id_fecha INT64,
+  tipo_combustible STRING,
+  precio INT64
+);
+
+CREATE TABLE combustibles.fecha(
+  id_fecha INT64,
+  fecha DATE
+);
+
+CREATE TABLE combustibles.ubicacion(
+  id_ubicacion INT64,
+  direccion STRING,
+  nombre_comuna STRING,
+  nombre_region STRING,
+  latitud FLOAT64,
+  longitud FLOAT64,
+  id_bencinera STRING
+);
+
+CREATE TABLE combustibles.bencinera(
+  id_bencinera STRING,
+  razon_social STRING,
+  distribuidor_nombre STRING,
+  distribuidor_logo_svg STRING,
+  tienda BOOL,
+  farmacia BOOL,
+  mantencion BOOL,
+  autoservicio BOOL,
+  pago_efectivo BOOL,
+  pago_cheque BOOL,
+  pago_tarjetas_bancarias BOOL,
+  pago_tarjetas_grandes_tiendas BOOL
+);
+
+
